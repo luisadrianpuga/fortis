@@ -78,11 +78,11 @@ const { title } = Astro.props;
         if (localStorage.getItem("appLang") === "en") {
           localStorage.setItem("appLang", "es");
           languageText.textContent = "Español";
-          window.location.assign("indexes.html"); // Redirect to the Spanish version of the page
+          window.location.assign("indexes.html" + "?lang=es"); // Redirect to the Spanish version of the page with a unique query parameter
         } else {
           localStorage.setItem("appLang", "en");
           languageText.textContent = "English";
-          window.location.assign("index.html"); // Redirect to the English version of the page
+          window.location.assign("index.html" + "?lang=en"); // Redirect to the English version of the page with a unique query parameter
         }
       });
     }
