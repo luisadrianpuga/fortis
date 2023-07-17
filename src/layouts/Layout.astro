@@ -30,22 +30,7 @@ const { title } = Astro.props;
   </body>
   <script>
 
-    function openMaps() {
-          var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-          // Check if the user is using an iOS device
-          if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-            window.location.href = "maps://maps.apple.com/?q=40+York+Road+Suite+250+Towson+MD+21204";
-          }
-          // Check if the user is using an Android device
-          else if (/android/i.test(userAgent)) {
-            window.location.href = "geo:0,0?q=40+York+Road+Suite+250+Towson+MD+21204";
-          }
-          // Fallback for other devices
-          else {
-            window.open("https://maps.google.com/?q=40+York+Road+Suite+250+Towson+MD+21204", "_blank");
-          }
-        }
+    
     
     const switchTheme = document.querySelector(
       "[data-switch-theme]"
@@ -127,6 +112,29 @@ const { title } = Astro.props;
     }
 
 
+    function updateLanguage() {
+    const navItems = Array.from(document.querySelectorAll('.nav-item'));
+    const language = localStorage.getItem("appLang");
+    
+    navItems.forEach(item => {
+        const textEn = item.getAttribute('data-text-en');
+        const textEs = item.getAttribute('data-text-es');
+        
+        if (language === "en") {
+          item.textContent = textEn;
+        } else {
+          item.textContent = textEs;
+        }
+    });
+  }
+  
+  window.addEventListener('load', () => {
+    document.getElementById('language-switch').addEventListener('click', () => {
+      updateLanguage();
+    });
+    
+    updateLanguage();
+  });
 
 
   </script>

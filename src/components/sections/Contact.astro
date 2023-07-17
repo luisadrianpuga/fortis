@@ -64,10 +64,31 @@ import Title from "../shared/Title.astro";
             Address
           </Title>
           <Paragraph>
-            <a href="https://maps.google.com/?q=40+York+Road+Suite+250+Towson+MD+21204" target="_blank" rel="noopener noreferrer" class="underline">40 York Road Suite 250, Towson, MD 21204</a>
+            <a href="#" id="address-link" class="underline">40 York Road Suite 250, Towson, MD 21204</a>
           </Paragraph>
         </div>
       </div>
-    </Container>
+      </Container>
+  
+      <script type="module">
+        document.getElementById('address-link').addEventListener('click', function openMaps(event) {
+          event.preventDefault();
+          
+          var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    
+          // Check if the user is using an iOS device
+          if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            window.location.href = "maps://maps.apple.com/?q=40+York+Road+Suite+250+Towson+MD+21204";
+          }
+          // Check if the user is using an Android device
+          else if (/android/i.test(userAgent)) {
+            window.location.href = "geo:0,0?q=40+York+Road+Suite+250+Towson+MD+21204";
+          }
+          // Fallback for other devices
+          else {
+            window.open("https://maps.google.com/?q=40+York+Road+Suite+250+Towson+MD+21204", "_blank");
+          }
+        });
+      </script>
   </section>
   
