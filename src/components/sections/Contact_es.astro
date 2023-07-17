@@ -1,0 +1,92 @@
+---
+import Container from "../shared/Container.astro";
+import Paragraph from "../shared/Paragraph.astro";
+import Title from "../shared/Title.astro";
+---
+
+<section id="contact" class="bg-gray-100 py-20">
+  <Container className="max-w-4xl mx-auto space-y-8">
+    <div class="text-center">
+      <Title class="text-4xl font-bold text-primary">
+        Contáctenos
+      </Title>
+      <Paragraph className="mt-4 text-lg">
+        Para obtener una respuesta más rápida, no dude en comunicarse con nosotros por teléfono o programar una cita en Calendly.
+      </Paragraph>
+    </div>
+    <div class="mx-auto space-y-8">
+      <div class="text-center">
+        <Title class="text-2xl font-bold text-primary">
+          Seguro
+        </Title>
+        <Paragraph>
+          Teléfono: <a href="tel:+13019574838" class="underline"> (301) 957-4838</a>
+        </Paragraph>
+      </div>
+
+      <div class="text-center">
+        <Title class="text-2xl font-bold text-primary">
+          Bienes Raíces
+        </Title>
+        <Paragraph>
+          Teléfono: <a href="tel:+18005900925" class="underline"> (800) 590-0925</a>
+        </Paragraph>
+      </div>
+
+      <div class="text-center">
+        <Title class="text-2xl font-bold text-primary">
+          Horario de Atención
+        </Title>
+        <Paragraph>
+          Seguro: Lun-Vie: 9:00 AM - 6:00 PM
+          <br />
+          Bienes Raíces: Lun-Dom: 9:00 AM - 9:00 PM
+        </Paragraph>
+      </div>
+
+      <div class="text-center">
+        <Title class="text-2xl font-bold text-primary">
+          Programar una Cita
+        </Title>
+        <Paragraph>
+          Haga clic en el botón a continuación para programar una cita conveniente con nuestros expertos:
+        </Paragraph>
+        <div class="flex justify-center">
+          <a href="https://calendly.com/your-calendly-link" target="_blank" rel="noopener noreferrer" class="bg-primary text-white px-6 py-3 rounded-md hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary">
+            Programar Cita
+          </a>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <Title class="text-2xl font-bold text-primary">
+          Dirección
+        </Title>
+        <Paragraph>
+          <a href="#" id="address-link" class="underline">40 York Road Suite 250, Towson, MD 21204</a>
+        </Paragraph>
+      </div>
+    </div>
+    </Container>
+
+    <script type="module">
+      document.getElementById('address-link').addEventListener('click', function openMaps(event) {
+        event.preventDefault();
+        
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  
+        // Check if the user is using an iOS device
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          window.location.href = "maps://maps.apple.com/?q=40+York+Road+Suite+250+Towson+MD+21204";
+        }
+        // Check if the user is using an Android device
+        else if (/android/i.test(userAgent)) {
+          window.location.href = "geo:0,0?q=40+York+Road+Suite+250+Towson+MD+21204";
+        }
+        // Fallback for other devices
+        else {
+          window.open("https://maps.google.com/?q=40+York+Road+Suite+250+Towson+MD+21204", "_blank");
+        }
+      });
+    </script>
+</section>
