@@ -1,0 +1,73 @@
+---
+import Container from "../shared/Container.astro";
+import Paragraph from "../shared/Paragraph.astro";
+import Title from "../shared/Title.astro";
+
+---
+<section id="contact" class="bg-gray-100 py-20">
+    <Container className="max-w-4xl mx-auto space-y-8">
+      <div class="text-center">
+        <Title class="text-4xl font-bold text-primary">
+          Contact Us
+        </Title>
+        <Paragraph className="mt-4 text-lg">
+          For a faster response, feel free to contact us via phone or schedule a Calendly appointment.
+        </Paragraph>
+      </div>
+      
+      <div class="mx-auto space-y-8">
+        <div class="text-center">
+          <Title class="text-2xl font-bold text-primary">
+            Insurance
+          </Title>
+          <Paragraph>
+            Phone: <a href="tel:+13019574838" class="underline"> (301) 957-4838</a>
+          </Paragraph>
+        </div>
+  
+        <div class="text-center">
+          <Title class="text-2xl font-bold text-primary">
+            Real Estate
+          </Title>
+          <Paragraph>
+            Phone: <a href="tel:+18005900925" class="underline"> (800) 590-0925</a>
+          </Paragraph>
+        </div>
+  
+        <div class="text-center">
+          <Title class="text-2xl font-bold text-primary">
+            Business Hours
+          </Title>
+          <Paragraph>
+            Insurance: Mon-Fri: 9:00 AM - 6:00 PM
+            <br />
+            Real Estate: Mon-Sun: 9:00 AM - 9:00 PM
+          </Paragraph>
+        </div>
+  
+        <div class="text-center">
+          <Title class="text-2xl font-bold text-primary">
+            Schedule an Appointment
+          </Title>
+          <Paragraph>
+            Click the button below to schedule a convenient appointment with our experts:
+          </Paragraph>
+          <div class="flex justify-center">
+            <a href="https://calendly.com/your-calendly-link" target="_blank" rel="noopener noreferrer" class="bg-primary text-white px-6 py-3 rounded-md hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary">
+              Schedule Appointment
+            </a>
+          </div>
+        </div>
+        
+        <div class="text-center">
+          <Title class="text-2xl font-bold text-primary">
+            Address
+          </Title>
+          <Paragraph>
+            <a href="https://maps.google.com/?q=40+York+Road+Suite+250+Towson+MD+21204" target="_blank" rel="noopener noreferrer" class="underline">40 York Road Suite 250, Towson, MD 21204</a>
+          </Paragraph>
+        </div>
+      </div>
+    </Container>
+  </section>
+  
