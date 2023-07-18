@@ -27,7 +27,7 @@ const navItems = [
     {
         href:"#contact",
         textEn:"Contact",
-        textEs:"Contact"
+        textEs:"Contáctenos"
     },
 ]
 
@@ -52,15 +52,14 @@ const navItems = [
                     {navItems.map(item => <Navitem {...item} />)}
                 </ul>
         
-                <div class="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-bg lg:border-0 px-6 lg:px-0">
-                    <BtnLink text="Get Started" href="#cta" className="flex justify-center w-full sm:w-max" variant="primary"/>
-                </div>
+               
             </div>
         
             <div class="min-w-max flex items-center gap-x-3">
-                <button id="language-switch" class="outline-none flex items-center rounded-full gap-2 p-2 lg:p-3 border border-box-border">
-                    <span class="flex justify-center w-full sm:w-max" id="language-text">English</span>
+                <button id="language-switch" class="outline-none flex items-center rounded-full gap-2 px-10 py-3 border border-box-border hover:bg-primary hover:text-white transition duration-100">
+                    <span class="flex justify-center w-full sm:w-max font-medium " id="language-text">English</span>
                 </button>
+                
         
                 <button data-toggle-nav data-open-nav="false" class="lg:hidden lg:invisible outline-none w-7 h-auto flex flex-col relative">
                     <span id="line1" class="w-6 h-0.5 rounded-full bg-heading-2 transition-all duration-300 ease-linear"></span> 
