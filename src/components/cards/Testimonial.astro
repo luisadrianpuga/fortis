@@ -1,0 +1,31 @@
+
+---
+import Paragraph from '../shared/Paragraph.astro';
+
+export interface Props {
+  name: string;
+  testimonial: string;
+  imageUrl: string;
+}
+
+const { name, testimonial, imageUrl } = Astro.props;
+---
+<div class="bg-white rounded-xl shadow-md overflow-hidden md:flex md:flex-col items-center">
+  <div class="relative">
+    <div class="bg-gradient-to-br to-transparent absolute z-10 w-full h-full" style={{mixBlendMode: 'multiply'}}></div>
+    <img
+      class="object-cover relative z-0"
+      src={imageUrl}
+      alt={name}
+      onLoad={(e) => e.target.parentNode.style.height = `${e.target.offsetHeight}px`}
+    />
+  </div>
+  <div class="p-8 w-full">
+    <div class="text-xl tracking-wide text-primary font-bold text-center">
+      {name}
+    </div>
+    <div class="mt-2 text-gray-500 text-sm text-center">
+      <Paragraph>{testimonial}</Paragraph>
+    </div>
+  </div>
+</div>
