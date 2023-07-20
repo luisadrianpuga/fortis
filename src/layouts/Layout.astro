@@ -34,7 +34,7 @@ const { title } = Astro.props;
       const backToTopBtn = document.getElementById('back-to-top-btn');
 
       window.addEventListener('scroll', () => {
-          if (window.pageYOffset > 100) { // Show back-to-top button after scrolling down 100px
+          if (window.pageYOffset > 50) { // Show back-to-top button after scrolling down 100px
               backToTopBtn.classList.remove('hidden');
               backToTopBtn.classList.add('flex');
           } else {
