@@ -16,9 +16,6 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/navbar.css">
-    <link rel="stylesheet" href="/styles/footer.css">  
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content="AgenceX - SEO Agency website landing page made with ASTROJS and TAILWINDCSS">
     <title>Fortis - {title}</title>
@@ -280,50 +277,4 @@ const { title } = Astro.props;
   }
 </style>
 
-<style>
-  /* Transform hamburger menu */
-  [data-toggle-nav] {
-      position: relative;
-  }
-
-  [data-toggle-nav] span {
-      transition: transform 0.3s ease-in-out;
-  }
-
-  [data-toggle-nav][data-open-nav="true"] #line1 {
-      transform: translateY(4px) rotate(45deg);
-  }
-
-  [data-toggle-nav][data-open-nav="true"] #line2 {
-      opacity: 0;
-  }
-
-  [data-toggle-nav][data-open-nav="true"] #line3 {
-      transform: translateY(-4px) rotate(-45deg);
-  }
-
-  /* Style for smaller screens */
-  @media (max-width: 640px) { /* Adjust the break-point as needed */
-      ul {
-          flex-direction: column;
-      }
-
-      ul li {
-          text-align: center;
-          padding: 10px 0;
-      }
-
-      /* Hide menu by default and show when open */
-      [data-navbar] {
-          height: 0;
-          overflow: hidden;
-          transform: scale(1, 0);
-          transition: transform 0.3s ease-in-out;
-      }
-
-      [data-navbar][data-open-nav="true"] {
-          transform: scale(1, 1);
-      }
-  }
-</style>
 
