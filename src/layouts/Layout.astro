@@ -34,7 +34,7 @@ const { title } = Astro.props;
       const backToTopBtn = document.getElementById('back-to-top-btn');
 
       window.addEventListener('scroll', () => {
-          if (window.pageYOffset > 50) { // Show back-to-top button after scrolling down 100px
+          if (window.pageYOffset > 10) { // Show back-to-top button after scrolling down 100px
               backToTopBtn.classList.remove('hidden');
               backToTopBtn.classList.add('flex');
           } else {
@@ -161,6 +161,23 @@ const { title } = Astro.props;
 
   </script>
   <script>
+    // Toggle navigation functionality
+    const navToggleBtn = document.querySelector('[data-toggle-nav]');
+    const navOverlay = document.querySelector('[data-nav-overlay]');
+    const navbar = document.querySelector('[data-navbar]');
+
+    navToggleBtn.addEventListener('click', () => {
+        const isOpen = navToggleBtn.getAttribute('data-open-nav') === 'true';
+
+        navToggleBtn.setAttribute('data-open-nav', !isOpen);
+        navOverlay.classList.toggle('hidden', isOpen);
+        navbar.classList.toggle('h-0', isOpen);
+        navbar.classList.toggle('overflow-hidden', isOpen);
+        navbar.classList.toggle('scale-y-0', isOpen);
+    });
+</script>
+
+  <script>
     const toggleMenu = document.querySelector(
       "[data-toggle-nav]"
     ) as HTMLButtonElement;
@@ -259,3 +276,51 @@ const { title } = Astro.props;
     display: flex;
   }
 </style>
+
+<style>
+  /* Transform hamburger menu */
+  [data-toggle-nav] {
+      position: relative;
+  }
+
+  [data-toggle-nav] span {
+      transition: transform 0.3s ease-in-out;
+  }
+
+  [data-toggle-nav][data-open-nav="true"] #line1 {
+      transform: translateY(4px) rotate(45deg);
+  }
+
+  [data-toggle-nav][data-open-nav="true"] #line2 {
+      opacity: 0;
+  }
+
+  [data-toggle-nav][data-open-nav="true"] #line3 {
+      transform: translateY(-4px) rotate(-45deg);
+  }
+
+  /* Style for smaller screens */
+  @media (max-width: 640px) { /* Adjust the break-point as needed */
+      ul {
+          flex-direction: column;
+      }
+
+      ul li {
+          text-align: center;
+          padding: 10px 0;
+      }
+
+      /* Hide menu by default and show when open */
+      [data-navbar] {
+          height: 0;
+          overflow: hidden;
+          transform: scale(1, 0);
+          transition: transform 0.3s ease-in-out;
+      }
+
+      [data-navbar][data-open-nav="true"] {
+          transform: scale(1, 1);
+      }
+  }
+</style>
+
