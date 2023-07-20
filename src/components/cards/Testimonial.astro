@@ -11,10 +11,10 @@ export interface Props {
 const { name, testimonial, imageUrl } = Astro.props;
 ---
 <div class="max-w-lg mx-auto bg-white rounded-xl shadow-md overflow-hidden md:flex md:flex-col">
-  <div class="relative flex items-center justify-center h-64 md:h-auto">
+  <div class="relative flex items-center justify-center md:h-half">
     <div class="bg-gradient-to-br to-transparent absolute z-10 w-full h-full" style={{mixBlendMode: 'multiply'}}></div>
     <img
-      class="object-cover relative z-0 max-h-full mx-auto"
+      class="object-cover relative z-0 w-full h-full"
       src={imageUrl}
       alt={name}
     />
