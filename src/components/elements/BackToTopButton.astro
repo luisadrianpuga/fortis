@@ -1,7 +1,7 @@
 ---
 ---
 <button id="back-to-top-btn" class="back-to-top hidden fixed bottom-4 right-4 z-50 p-2 rounded-full bg-primary text-white" aria-label="Back to top">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-9 w-9">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
     </svg>
 </button>
@@ -9,5 +9,24 @@
 <style>
     .back-to-top {
         transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+        animation: wiggle 0.5s 1;
+    }
+
+    @keyframes wiggle {
+        0% {
+            transform: translateX(0);
+        }
+        25% {
+            transform: translateX(-5px);
+        }
+        50% {
+            transform: translateX(0);
+        }
+        75% {
+            transform: translateX(5px);
+        }
+        100% {
+            transform: translateX(0);
+        }
     }
 </style>
