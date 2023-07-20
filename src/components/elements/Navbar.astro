@@ -33,15 +33,23 @@ const navItems = [
 ---
 
 <style>
-    @media (max-width: 768px) {
+    .logo-img {
+        width: 100px;  /* default size */
+        height: auto;
+    }
+    @media (max-width: 768px) {  /* for smaller screens */
+        .logo-img {
+            width: 50px;
+        }
         nav {
             justify-content: flex-start;
         }
         .min-w-max {
             margin-right: auto;
         }
-        }
+    }
 </style>
+
 <header class="absolute inset-x-0 top-0 z-50 py-6">
     <Container>
         <nav class="w-full flex justify-between gap-6 relative">
@@ -49,7 +57,7 @@ const navItems = [
             <div class="min-w-max inline-flex relative">
                 <a href="/" class="relative flex items-center gap-3">
                 <div class="inline-flex">
-                    <img src="/logos/fortis-logo.png" alt="Logo" class="h-8" /> <!-- Replace "/path/to/your/logo.png" with the actual path to your logo image -->
+                    <img src="/logos/fortis-logo.png" alt="Logo" class="h-8 logo-img" /> <!-- Replace "/path/to/your/logo.png" with the actual path to your logo image -->
                 </div>
                 </a>
             </div>
