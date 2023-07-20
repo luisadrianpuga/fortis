@@ -11,12 +11,13 @@ export interface Props {
 const { name, testimonial, imageUrl } = Astro.props;
 ---
 <div class="bg-white rounded-xl shadow-md overflow-hidden md:flex md:flex-col items-center">
-  <div class="relative max-h-64 md:max-h-full w-full">
+  <div class="relative">
     <div class="bg-gradient-to-br to-transparent absolute z-10 w-full h-full" style={{mixBlendMode: 'multiply'}}></div>
     <img
-      class="object-cover relative z-0 mx-auto"
+      class="object-cover relative z-0 center"
       src={imageUrl}
       alt={name}
+      onLoad={(e) => e.target.parentNode.style.height = `${e.target.offsetHeight}px`}
     />
   </div>
   <div class="p-8 w-full">
