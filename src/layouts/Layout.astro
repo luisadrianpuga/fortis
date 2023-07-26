@@ -31,6 +31,26 @@ const { title } = Astro.props;
   
   </body>
   <script>
+    let slidingContainer = document.querySelector('.sliding-container');
+    
+    slidingContainer.addEventListener('mouseover', pauseAnimation);
+    slidingContainer.addEventListener('mouseout', resumeAnimation);
+    slidingContainer.addEventListener('scroll', pauseAnimation);
+    
+    // touch events for mobile
+    slidingContainer.addEventListener('touchstart', pauseAnimation);
+    slidingContainer.addEventListener('touchend', resumeAnimation);
+
+    function pauseAnimation() {
+      slidingContainer.style.animationPlayState = 'paused';
+    }
+    
+    function resumeAnimation() {
+      slidingContainer.style.animationPlayState = 'running';
+    }
+</script>
+
+  <script>
       var isMobile = {
           Android: function() {
               return navigator.userAgent.match(/Android/i);
