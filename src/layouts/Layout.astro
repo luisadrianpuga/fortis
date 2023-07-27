@@ -52,16 +52,13 @@ const { title } = Astro.props;
   
       slider.addEventListener('scroll', () => {
         isAutoScrolling = false;
-      });
-  
-      slider.addEventListener('mouseleave', () => {
-        isAutoScrolling = true;
-        requestAnimationFrame(step);
+        setTimeout(() => { isAutoScrolling = true; }, 2000); // delay before auto scrolling resumes
       });
   
       requestAnimationFrame(step);
     }
   </script>
+  
   
   
   
