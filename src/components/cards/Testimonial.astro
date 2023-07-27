@@ -9,15 +9,17 @@ export interface Props {
 
 const { name, testimonial, imageUrl } = Astro.props;
 ---
-<div class="bg-white rounded-xl shadow-md overflow-hidden md:flex md:flex-col mr-4" >
-  <div class="relative">
+<div class="bg-white rounded-xl shadow-md overflow-hidden md:flex md:flex-col mr-4 mt-3 mb-4" >
+
+
+  <div class="relative h-48 md:h-64">
     <img
+      class="absolute inset-0 w-full h-full object-cover"
       src={imageUrl}
       alt={name}
-      style="object-fit: cover;"
     />
   </div>
-  <div class="pt-8 text-center">
+  <div class="pt-6 text-center">
     <div class="text-xl tracking-wide text-primary font-bold">
       {name}
     </div>
