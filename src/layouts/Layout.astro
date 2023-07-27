@@ -31,34 +31,38 @@ const { title } = Astro.props;
   
   </body>
   <script>
-    const slider = document.querySelector('.snap');
-    let scrollAmount = 0;
-    let isAutoScrolling = true;
-    
-    const step = () => {
-      if (isAutoScrolling) {
-        slider.scrollTo(scrollAmount++, 0);
-    
-        if (scrollAmount < slider.scrollWidth - slider.offsetWidth) {
-          requestAnimationFrame(step);
-        } else {
-          scrollAmount = 0;
-          setTimeout(() => requestAnimationFrame(step), 2000);
+    // check if the device is mobile-sized
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      const slider = document.querySelector('.snap');
+      let scrollAmount = 0;
+      let isAutoScrolling = true;
+  
+      const step = () => {
+        if (isAutoScrolling) {
+          slider.scrollTo(scrollAmount++, 0);
+  
+          if (scrollAmount < slider.scrollWidth - slider.offsetWidth) {
+            requestAnimationFrame(step);
+          } else {
+            scrollAmount = 0;
+            setTimeout(() => requestAnimationFrame(step), 2000);
+          }
         }
-      }
-    };
-    
-    slider.addEventListener('scroll', () => {
-      isAutoScrolling = false;
-    });
+      };
   
-    slider.addEventListener('mouseleave', () => {
-      isAutoScrolling = true;
+      slider.addEventListener('scroll', () => {
+        isAutoScrolling = false;
+      });
+  
+      slider.addEventListener('mouseleave', () => {
+        isAutoScrolling = true;
+        requestAnimationFrame(step);
+      });
+  
       requestAnimationFrame(step);
-    });
-  
-    requestAnimationFrame(step);
+    }
   </script>
+  
   
   
 
