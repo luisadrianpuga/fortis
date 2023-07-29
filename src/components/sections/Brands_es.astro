@@ -4,6 +4,46 @@ import Title from "../shared/Title.astro";
 
 ---
 
+<style>
+    .logo-scroll {
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none; /* For Firefox */
+      animation: scroll 10s linear infinite; 
+    }
+    
+    .logo-scroll::-webkit-scrollbar {
+      display: none; /* For Chrome, Safari and Opera */
+    }
+  
+    .logo-item {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 120px; /* Adjust this value based on your design */
+      padding: 0 10px;
+    }
+  
+    .logo-item img {
+      max-height: 100%;
+      width: auto;
+    }
+  
+    /* For mobile devices */
+    @media (max-width: 767px) {
+      .logo-item {
+        height: 120px;  /* adjust as needed */
+      }
+    }
+  
+    /* For desktop devices */
+    @media (min-width: 768px) {
+      .logo-item {
+        height: 120px;  /* adjust as needed */
+      }
+    }
+</style>
 <section>
     <Container className="space-y-8">
         <div class="text-center max-w-3xl mx-auto">
@@ -11,15 +51,33 @@ import Title from "../shared/Title.astro";
                 Con la confianza de empresas como
             </Title>
         </div>
-        <div class="flex justify-center flex-wrap gap-4">
-            <div class="p-4 sm:p-5 rounded-xl bg-body border border-box-border group">
-                <img src="/logos/spotify.png" width="260" height="120" alt="spotify" class="h-34 sm:h-36 w-auto ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-105">
+        <div class="logo-scroll gap-4">
+            <div class="p-4 sm:p-5 rounded-xl bg-body border border-box-border group logo-item">
+                <img src="/logos/spotify.png" width="360" height="180" alt="spotify" class="h-34 sm:h-36 w-auto ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-105">
             </div>
-            <div class="p-4 sm:p-5 rounded-xl bg-body border border-box-border group">
-                <img src="/logos/slack.png" width="160" height="120" alt="slack" class="h-34 sm:h-36 w-auto ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-105">
+             
+            <div class="p-4 sm:p-5 rounded-xl bg-body border border-box-border group logo-item">
+                <img src="/logos/slack.png" width="260" height="180" alt="slack" class="h-34 sm:h-36 w-auto ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-105">
             </div>
-            <div class="p-4 sm:p-5 rounded-xl bg-body border border-box-border group">
-                <img src="/logos/paypallogo.png" width="160" height="120" alt="paypal" class="h-34 sm:h-36 w-auto ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-105">
+             
+            <div class="p-4 sm:p-5 rounded-xl bg-body border border-box-border group logo-item">
+                <img src="/logos/paypallogo.png" width="260" height="180" alt="paypal" class="h-34 sm:h-36 w-auto ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-105">
+            </div>
+             
+            <div class="p-4 sm:p-5 rounded-xl bg-body border border-box-border group logo-item">
+                <img src="/logos/mc.png" width="360" height="180" alt="spotify" class="h-34 sm:h-36 w-auto ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-105">
+            </div>
+             
+            <div class="p-4 sm:p-5 rounded-xl bg-body border border-box-border group logo-item">
+                <img src="/logos/fortis.png" width="260" height="180" alt="slack" class="h-34 sm:h-36 w-auto ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-105">
+            </div>
+             
+            <div class="p-4 sm:p-5 rounded-xl bg-body border border-box-border group logo-item">
+                <img src="/logos/smart.png" width="260" height="180" alt="paypal" class="h-34 sm:h-36 w-auto ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-105">
+            </div>
+            
+            <div class="p-4 sm:p-5 rounded-xl bg-body border border-box-border group logo-item">
+                <img src="/logos/reallogos.png" width="260" height="180" alt="paypal" class="h-34 sm:h-36 w-auto ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-105">
             </div>
             
         </div>
