@@ -16,17 +16,41 @@ import Title from "../shared/Title.astro";
 
   .logo-item {
     flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px; /* Adjust this value based on your design */
+    padding: 0 10px;
+  }
+
+  .logo-item img {
+    max-height: 100%;
+    width: auto;
+  }
+
+  /* For mobile devices */
+  @media (max-width: 767px) {
+    .logo-item {
+      height: 50px;  /* adjust as needed */
+    }
+  }
+
+  /* For desktop devices */
+  @media (min-width: 768px) {
+    .logo-item {
+      height: 80px;  /* adjust as needed */
+    }
   }
 </style>
 
 <section>
-    <Container className="space-y-8">
-        <div class="text-center max-w-3xl mx-auto">
-            <Title>
-                With the trust of companies like
-            </Title>
-        </div>
-        <div class="logo-scroll gap-4">
+  <Container className="space-y-8">
+    <div class="text-center max-w-3xl mx-auto">
+      <Title>
+        With the trust of companies like
+      </Title>
+    </div>
+    <div class="logo-scroll gap-4">
             <div class="p-4 sm:p-5 rounded-xl bg-body border border-box-border group logo-item">
                 <img src="/logos/spotify.png" width="360" height="180" alt="spotify" class="h-34 sm:h-36 w-auto ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-105">
             </div>
