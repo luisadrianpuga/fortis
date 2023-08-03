@@ -1,0 +1,65 @@
+---
+import AffiliatePartner from "../cards/AffiliatePartner.astro";
+import Container from "../shared/Container.astro";
+import Title from "../shared/Title.astro";
+import Paragraph from "../shared/Paragraph.astro";
+---
+
+<section id="partners">
+    <Container className="space-y-10 md:sapce-y-12">
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+            <Title>
+                Powering Your Success Through Our Strategic Partnerships
+            </Title>
+            <Paragraph>
+                We collaborate with a hand-picked network of industry-leading partners, offering you the highest quality services and solutions under one roof. Your needs and goals are our priority, and to ensure your success, we leverage these partnerships to bring you the best of what the industry has to offer.
+            </Paragraph>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <AffiliatePartner 
+                name="Taylor Properties" 
+                key = "Your Gateway to Premium Real Estate"
+                link="https://www.taylorprops.com/"
+                logoUrl="https://bay.cdn.bkat.io/cust/iq_taylor_properties/agent-images/543534534/293286657_436559241819068_7946728482366017492_n.jpg">
+            </AffiliatePartner>
+            <AffiliatePartner 
+                name="Asesoría Americana & Taxline Services" 
+                key = "Expert Tax and Financial Services"
+                link="https://taxlineandservices.com/"
+                logoUrl="http://taxlineandservices.live-website.com/wp-content/uploads/2021/02/WhatsApp-Image-2021-02-06-at-10.12.31-AM-1-300x200.jpeg">
+            </AffiliatePartner>
+            <AffiliatePartner 
+                name="District Home Loans" 
+                key = "Your Trusted Partner in Home Financing"
+                link="https://districthomeloans.com/"
+                logoUrl="https://ypx.806.myftpupload.com/wp-content/uploads/2021/08/phone.jpg">
+            </AffiliatePartner>
+            <AffiliatePartner 
+                name="Value Assist Cap" 
+                key = "Elevating Businesses with Comprehensive Capital Solutions"
+                link="https://valueassistcap.com/"
+                logoUrl="https://valueassistcap.com/wp-content/uploads/2021/08/iStock-1222648303-300x200.jpg">
+            </AffiliatePartner>
+            <AffiliatePartner 
+                name="Futurity Structures"
+                key = "Building Future with Innovative Smart Living Solutions" 
+                link="https://futuritystructures.com/"
+                logoUrl="https://futuritystructures.com/wp-content/uploads/2022/01/5-2.png">
+            </AffiliatePartner>
+            <AffiliatePartner 
+                name="CLA Title"
+                key = "Secure Property Transactions with Our Trusted Title Company" 
+                link="https://clatitle.com/"
+                logoUrl="https://i0.wp.com/clatitle.com/wp-content/uploads/2022/03/homepage-image-1.png?w=985&ssl=1">
+            </AffiliatePartner>
+            <AffiliatePartner 
+                name="Legalshield & ID Shield"
+                key = "Protecting You and Your Business Legally and Digitally" 
+                link="https://fortizpa.wearelegalshield.com/"
+                logoUrl="https://fortizpa.wearelegalshield.com/sites/default/files/styles/x_large/public/image/2021-10/GettyImages-1045302284.jpg?itok=CTPhx1K8">
+            </AffiliatePartner>
+
+            <!-- Repeat for other partners -->
+        </div>
+    </Container>
+</section>
