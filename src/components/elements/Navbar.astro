@@ -40,12 +40,34 @@ const navItems = [
 <style>
     @media (max-width: 768px) {
         nav {
-            justify-content: flex-start;
+            flex-direction: column;  /* Stack elements vertically on small screens */
+            align-items: stretch;  /* Make child items take up full width */
         }
+
+        /* Adjust padding and margin to create space */
         .min-w-max {
-            margin-right: auto;
+            margin-right: 0;
+            margin-bottom: 1rem;  /* Add space below logo */
         }
+
+        /* Adjust button size and text */
+        #language-switch {
+            padding: 1rem;
+            font-size: 0.75rem;  /* Adjust text size */
         }
+
+        /* Adjust menu button size */
+        [data-toggle-nav] {
+            width: 2rem;  /* Adjust button size */
+            height: 2rem;
+        }
+
+        /* Adjust navbar height */
+        [data-navbar] {
+            height: auto;
+        }
+    }
+
 </style>
 <header class="absolute inset-x-0 top-0 z-50 py-6">
     <Container>
