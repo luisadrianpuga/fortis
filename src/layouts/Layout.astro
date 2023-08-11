@@ -62,36 +62,7 @@ const { title } = Astro.props;
   
     requestAnimationFrame(step);
   </script>
-  <script>
-    const slider = document.querySelector('.snap');
-    let scrollAmount = 0;
-    let isAutoScrolling = true;
-    let timer;
   
-    const step = () => {
-      if (isAutoScrolling) {
-        slider.scrollTo(scrollAmount++, 0);
-  
-        if (scrollAmount < slider.scrollWidth - slider.offsetWidth) {
-          requestAnimationFrame(step);
-        } else {
-          scrollAmount = 0;
-          setTimeout(() => requestAnimationFrame(step), 2000);
-        }
-      }
-    };
-  
-    slider.addEventListener('pointerdown', () => {
-      isAutoScrolling = false;
-    });
-  
-    slider.addEventListener('pointerup', () => {
-      clearTimeout(timer);
-      timer = setTimeout(() => { isAutoScrolling = true; }, 2000);
-    });
-  
-    requestAnimationFrame(step);
-  </script>
   
 
   <script>
