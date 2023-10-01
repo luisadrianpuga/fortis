@@ -19,6 +19,16 @@ import Paragraph from "../shared/Paragraph.astro";
       width: 100%;
       height: 100%;
     }
+
+    .external-link {
+        color: blue; /* or any color that stands out */
+        text-decoration: underline;
+    }
+
+    .external-link-icon {
+        font-size: smaller;
+        vertical-align: super;
+    }
     </style>
 <section id="partners">
     <Container className="space-y-10 md:sapce-y-12">
@@ -79,10 +89,10 @@ import Paragraph from "../shared/Paragraph.astro";
         <!-- Vivint Solar Promo -->
         <div class="text-center max-w-3xl mx-auto space-y-4 ">
             <Title>
-                Elevate Your Energy Savings with Vivint Solar
+                Elevate Your Security with Vivint's Smart Home Systems
             </Title>
             <Paragraph>
-                Partnering with Vivint Solar, we offer clean, cost-effective energy solutions to power your success sustainably. As a Licensed Security System Agency with Vivint, we ensure your peace of mind.
+                In partnership with <a href="https://www.vivint.com" target="_blank" class="external-link" title="Opens in a new tab">Vivint</a><span class="external-link-icon">↗</span>, we offer custom-built smart home security solutions. As a Licensed Security System Agency with Vivint, we provide you with peace of mind.
             </Paragraph>
             <!-- Video -->
             <div class="video-wrapper">
