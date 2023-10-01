@@ -4,6 +4,22 @@ import Container from "../shared/Container.astro";
 import Title from "../shared/Title.astro";
 import Paragraph from "../shared/Paragraph.astro";
 ---
+<style>
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+    }
+    
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+</style>
 <section id="partners">
     <Container className="space-y-10 md:sapce-y-12">
         <div class="text-center max-w-3xl mx-auto space-y-4">
@@ -16,10 +32,10 @@ import Paragraph from "../shared/Paragraph.astro";
         </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             <AffiliatePartner 
-                name="Taylor Properties"
+                name="District Pro Realty"
                 key = "Tu Puerta de Acceso a Bienes Raíces Premium" 
-                link="https://www.taylorprops.com/"
-                logoUrl="https://bay.cdn.bkat.io/cust/iq_taylor_properties/agent-images/543534534/293286657_436559241819068_7946728482366017492_n.jpg">
+                link="https://districtprorealty.com"
+                logoUrl="https://districtprorealty.com/wp-content/uploads/2022/10/district_pro_realty_family_house.jpg">
             </AffiliatePartner>
             <AffiliatePartner 
                 name="Asesoría Americana & Taxline Services"
@@ -55,6 +71,19 @@ import Paragraph from "../shared/Paragraph.astro";
 
             <!-- Repetir para otros socios -->
         </div>
+        <div class="text-center max-w-3xl mx-auto space-y-4 ">
+            <Title>
+                Eleve sus ahorros energéticos con Vivint Solar
+            </Title>
+            <Paragraph>
+                En asociación con Vivint Solar, ofrecemos soluciones energéticas limpias y rentables para impulsar su éxito de manera sostenible. Como Agencia de Sistemas de Seguridad Autorizada con Vivint, aseguramos su tranquilidad.
+            </Paragraph>
+            <!-- Video -->
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/KzJzXHmzc98?si=zloJf5fahN9t3U_f" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
         
     </Container>
 </section>

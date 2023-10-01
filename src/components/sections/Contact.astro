@@ -31,7 +31,7 @@ import Title from "../shared/Title.astro";
           </Title>
         </br>
           <Paragraph>
-            Broker (Taylor Properties) Office Phone Number: <a href="tel:+18005900925" class="underline"> +1 (800) 590-0925</a>
+            Broker (District Pro Realty) Office Phone Number: <a href="tel:+13014525691" class="underline"> +1 (301) 452-5691</a>
           </Paragraph>
         </br>
           <Paragraph>
@@ -69,7 +69,7 @@ import Title from "../shared/Title.astro";
             Address
           </Title>
           <Paragraph>
-            <a href="#" id="address-link" class="underline">40 York Road Suite 250, Towson, MD 21204</a>
+            <a href="#" id="address-link" class="underline">17 W Jefferson Street, Suite 207 Rockville, MD 20850</a>
           </Paragraph>
         </div>
       </div>
@@ -77,22 +77,22 @@ import Title from "../shared/Title.astro";
   
       <script type="module">
         document.getElementById('address-link').addEventListener('click', function openMaps(event) {
-          event.preventDefault();
-          
-          var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    
-          // Check if the user is using an iOS device
-          if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-            window.location.href = "maps://maps.apple.com/?q=40+York+Road+Suite+250+Towson+MD+21204";
-          }
-          // Check if the user is using an Android device
-          else if (/android/i.test(userAgent)) {
-            window.location.href = "geo:0,0?q=40+York+Road+Suite+250+Towson+MD+21204";
-          }
-          // Fallback for other devices
-          else {
-            window.open("https://maps.google.com/?q=40+York+Road+Suite+250+Towson+MD+21204", "_blank");
-          }
+        event.preventDefault();
+        
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  
+        // Check if the user is using an iOS device17 W Jefferson Street, Suite 207 Rockville, MD 
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          window.location.href = "maps://maps.apple.com/?q=17+W+Jefferson+Street+Suite+207+Rockville+MD+20850";
+        }
+        // Check if the user is using an Android device
+        else if (/android/i.test(userAgent)) {
+          window.location.href = "geo:0,0?q=17+W+Jefferson+Street+Suite+207+Rockville+MD+20850";
+        }
+        // Fallback for other devices
+        else {
+          window.open("https://maps.google.com/?q=17+W+Jefferson+Street+Suite+207+Rockville+MD+20850", "_blank");
+        }
         });
       </script>
   </section>
