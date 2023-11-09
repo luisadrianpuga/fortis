@@ -1,0 +1,36 @@
+---
+import TeamMember from "../cards/TeamMember.astro";
+import Container from "../shared/Container.astro";
+import Paragraph from "../shared/Paragraph.astro";
+import Title from "../shared/Title.astro";
+---
+
+<section id="team">
+    <Container className="space-y-10 md:space-y-12">
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+            <Title>
+                Conoce a Nuestro Equipo
+            </Title>
+            <Paragraph>
+                Profesionales dedicados a tu servicio.
+            </Paragraph>
+            
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <TeamMember 
+                name="Annette Velasquez" 
+                title="Especialista en Marketing" 
+                description="Annette aporta estrategias de marketing creativas al equipo, asegurando que nuestros servicios alcancen una amplia audiencia." 
+                imageUrl="https://github.com/luisadrianpuga/image_hosting/blob/main/annette-velasquez.jpeg?raw=true"
+                email="Annette@fortismultiservice.com"
+                phone="301-259-5082"
+                language="es">
+            </TeamMember>
+
+
+        
+        </div>
+
+        
+    </Container>
+</section>

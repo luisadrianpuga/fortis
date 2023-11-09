@@ -1,0 +1,47 @@
+---
+// Import Paragraph component and interface Props from Astro
+import Paragraph from '../shared/Paragraph.astro';
+
+export interface Props {
+    name: string,
+    title: string,
+    description: string,
+    imageUrl: string,
+    email: string,
+    phone: string,
+    language: string
+}
+
+// Destructure the props passed to the component
+const { name, title, description, imageUrl, email, phone, language } = Astro.props;
+---
+
+<div class="team-member-card flex flex-col relative p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow overflow-hidden">
+    <div class="image-container flex-none w-full h-1/2">
+        <img src={imageUrl} alt={`Picture of ${name}`} class="w-full h-full object-cover pb-5 rounded-t-3xl"/>
+    </div>
+    <div class="content-container flex-grow space-y-4">
+        <h2 class="name text-lg md:text-xl font-semibold text-heading-2">
+            {name}
+        </h2>
+        <h3 class="title text-md md:text-lg font-medium text-heading-3">
+            {title}
+        </h3>
+        
+        <Paragraph>
+            {description}
+        </Paragraph>
+        <div class="contact-info">
+            
+            <a href={`tel:${phone}`} class="phone-link text-primary hover:text-primary-dark" aria-label={`Call ${name}`}>
+                {phone}
+            </a>
+            <br/>
+            <br/>
+            <a href={`mailto:${email}`} class="email-link text-primary hover:text-primary-dark" aria-label={`Email ${name}`}>
+                {email}
+            </a>
+        </div>
+    </div>
+    <span class="decorative-circle absolute w-32 aspect-square -bottom-16 -right-16 bg-primary/10 rounded-full"></span>
+</div>
