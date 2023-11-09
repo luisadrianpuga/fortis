@@ -18,8 +18,9 @@ const { name, title, description, imageUrl, email, phone, language } = Astro.pro
 
 <div class="team-member-card flex flex-col relative p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow overflow-hidden">
     <div class="image-container flex-none w-full h-1/2">
-        <img src={imageUrl} alt={`Picture of ${name}`} class="w-full h-full object-cover pb-5 rounded-t-3xl"/>
+        <img src={imageUrl} alt={`Picture of ${name}`} class="w-full h-full object-cover pb-5 rounded-t-3xl" style="object-position: top;"/>
     </div>
+    
     <div class="content-container flex-grow space-y-4">
         <h2 class="name text-lg md:text-xl font-semibold text-heading-2">
             {name}
@@ -45,3 +46,11 @@ const { name, title, description, imageUrl, email, phone, language } = Astro.pro
     </div>
     <span class="decorative-circle absolute w-32 aspect-square -bottom-16 -right-16 bg-primary/10 rounded-full"></span>
 </div>
+<style>
+    @media screen and (max-width: 768px) { /* Adjust the max-width as needed for your breakpoint */
+        .image-container img {
+            object-fit: contain; /* Change to 'contain' to see the whole image */
+            object-position: top; /* Align the top of the image with the top of the container */
+        }
+        }
+</style>
