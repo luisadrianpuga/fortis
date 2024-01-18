@@ -1,48 +1,49 @@
 ---
 import Container from "../shared/Container.astro";
-import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
-
+import Paragraph from "../shared/Paragraph.astro";
+import Button from "../shared/Button.astro"; // Añadir un componente de botón para llamada a la acción
 ---
-
-<section id="features">
-    <Container className="flex flex-col midmd:flex-row gap-10 lg:gap-12">
-        <div class="flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col relative">
-            <Title>
-                Características:
-            </Title>
-            <Paragraph className="mt-8">
-                Experimente la Diferencia de <b>Fortis</b>
-            </Paragraph>
-            <ul class="mt-8 space-y-4 text-heading-3 font-medium">
-                <li>
-                    <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span> <b>Soluciones de Seguros Integrales:</b> Cobertura adaptada para sus necesidades únicas. Nos especializamos en líneas comerciales y personales, asegurando que tenga la protección adecuada para sus activos empresariales y personales.
-                </li>
-                <li>
-                    <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span> <b>Expertos en Seguros de Vida y Discapacidad:</b> Proteja a sus seres queridos y asegure su futuro financiero. Benefíciese de nuestra experiencia en Seguros de Vida y Discapacidad a través de proveedores de confianza como Ohio National & ERIE Insurance.
-                </li>
-                <li>
-                    <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span> <b>Seguros Especializados para Deportes Motorizados y Coches Clásicos:</b> Proteja su pasión por los deportes motorizados y los coches clásicos. Nuestra cobertura especializada garantiza que sus posesiones preciadas estén resguardadas contra circunstancias imprevistas.
-                </li>
-                <li>
-                    <span class="font-bold bg-box-bg rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">&checkmark;</span> <b> Valoraciones de Negocios y Análisis de Necesidades:</b>  ¿Planificando para el futuro? Ofrecemos servicios expertos de valoración de negocios y análisis de necesidades, ayudándole a tomar decisiones informadas sobre sus requisitos de cobertura.
-                </li>
-            </ul>
-            <Paragraph className="mt-8">
-                Descubra la cobertura que necesita. <b>Contáctenos para una consulta hoy. </b>Nuestro equipo está dedicado a proporcionar soluciones adaptadas y un servicio excepcional.
-            </Paragraph>
-            
-        </div>
-
-        <div class="max-w-md mx-auto midmd:max-w-none lg:mx-0 lg:pr-10 xl:pr-2 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2 midmd:h-auto relative">
-            <span class="absolute w-full aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-tr from-primary to-green-400 opacity-80 blur-2xl left-0 bottom-0"></span>
-            <div class="w-full h-80 sm:h-96 midmd:h-full overflow-hidden">
-                <div class="absolute rotate-45 -left-5 md:-left-10 lg:-left-20 xl:-left-24 p-1 top-1/2 w-16 h-16 bg-gradient-to-br from-primary to-orange-400 blur-3xl opacity-50"></div>
-                <div class="absolute p-1 -top-4 md:-top-10 right-0 w-20 h-20 bg-gradient-to-br from-primary to-orange-400 rounded-full blur-3xl opacity-60"></div>
-                <img src={"/images/dev-with-c-1.webp"} alt="banner image" class="w-auto h-auto max-h-full absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-                
-            </div>
-            
-        </div>
-    </Container>
+<section id="faq" class="bg-gray-100 py-10">
+  <Container className="flex flex-col gap-10">
+    <div class="flex-1 flex flex-col relative bg-white p-10 shadow-lg rounded-lg">
+      <Title>Preguntas Frecuentes: Desbloqueando la Seguridad Empresarial</Title>
+      <Paragraph className="mt-8">
+        Sumérgete en nuestras preguntas frecuentes para comprender cómo nuestras pólizas de seguro empresarial a medida fortalecen el futuro de tu emprendimiento. ¿Listo para más detalles? ¡Nuestros expertos están a solo una llamada de distancia!
+      </Paragraph>
+      <div class="mt-8">
+        <details class="mb-4">
+          <summary class="font-bold cursor-pointer">¿Qué Cobertura Integral Ofrece el Seguro Empresarial?</summary>
+          <Paragraph>
+            Más allá de lo básico, nuestro seguro empresarial ofrece una red de seguridad para tus activos, cubriendo daños a la propiedad, responsabilidades legales, riesgos relacionados con empleados y mucho más. ¡Hablemos de un plan que asegure todos los aspectos de tu negocio!
+          </Paragraph>
+        </details>
+        <details class="mb-4">
+          <summary class="font-bold cursor-pointer">¿Cómo Personalizar los Ingresos de mi Empresa para el Seguro según las Necesidades de mi Compañía?</summary>
+          <Paragraph>
+            Calcular los ingresos empresariales para el seguro no se trata solo de los números; se trata de comprender el ritmo de tu operación. Conéctate con nosotros para navegar a través del ingreso neto, los gastos operativos y más allá, asegurando que tu cobertura esté en sintonía con el pulso de tu negocio.
+          </Paragraph>
+        </details>
+        <details class="mb-4">
+          <summary class="font-bold cursor-pointer">¿Por Qué el Seguro Empresarial es la Columna Vertebral de Mi Empresa?</summary>
+          <Paragraph>
+            El seguro empresarial no solo protege; impulsa. Resguardando de eventos imprevistos y alineándose con los requisitos legales, es el guardián silencioso listo para convertir posibles obstáculos en caminos hacia el crecimiento. Aseguremos que tu empresa esté fortificada.
+          </Paragraph>
+        </details>
+        <details class="mb-4">
+          <summary class="font-bold cursor-pointer">Desvelando los Misterios del Seguro Empresarial – ¿Por Qué es el Sustento de Mi Empresa?</summary>
+          <Paragraph>
+            Es más que una red de seguridad; es un activo estratégico. El seguro empresarial es vital para proteger tu sueño contra lo impredecible, asegurando que tu viaje de startup a líder de la industria esté seguro y apoyado en cada paso. Descubre cómo con nuestro equipo.
+          </Paragraph>
+        </details>
+      </div>
+      <div class="mx-auto max-w-md sm:max-w-xl pt-10">
+        <a href="https://calendly.com/fortismultiservice/booknow" target="_blank" rel="noopener noreferrer">
+          <Button variant={"primary"}>
+            <span class="text-white relative z-[5]">¡Habla con un Experto Ahora!</span>
+          </Button>
+        </a>
+      </div>
+    </div>
+  </Container>
 </section>
