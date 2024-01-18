@@ -106,10 +106,10 @@ import Title from "../shared/Title.astro";
     }
 
     // Function to handle click on pin
-    function handlePinClick(event) {
+    function handlePinClick(event: Event) {
       closeAllPopups();
       
-      const pinId = event.target.getAttribute('data-pin-id');
+      const pinId = (event.target as HTMLElement).getAttribute('data-pin-id');
       const popupId = `#popup-${pinId}`;
       const popup = document.querySelector(popupId);
 
