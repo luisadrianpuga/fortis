@@ -214,19 +214,4 @@ import Title from "../shared/Title.astro";
             }
           }
         }, 4000); // Adjust time for scrolling speed
-      }
-  
-      function stopAutoScroll() {
-        clearInterval(scrollInterval);
-      }
-  
-      if (scrollContainer) {
-        scrollContainer.addEventListener('touchstart', stopAutoScroll);
-        scrollContainer.addEventListener('touchend', startAutoScroll);
-      }
-     
-  
-      startAutoScroll();
-    });
-  </script>
-  
+    
