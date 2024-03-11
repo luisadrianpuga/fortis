@@ -51,7 +51,90 @@ import Title from "../shared/Title.astro";
         </Title>
       </div>
       <div class="flex overflow-x-auto snap snap-x">
-      
+        <div class="snap-start">
+          <Service
+            name="🎉 Nuevos Propietarios de Casa"
+            testimonial="Conoce a los nuevos vecinos."
+            imageUrl="/images/fortissuccess1.jpg">
+          </Service>
+        </div>
+        <div class="snap-start">
+          <Service
+            name="🎉 Nuevos Propietarios de Casa"
+            testimonial="Conoce a los nuevos vecinos."
+            imageUrl="/images/fortissuccess2.jpg">
+          </Service>
+        </div>
+        <div class="snap-start">
+          <Service
+            name="🎉 Nuevos Propietarios de Casa"
+            testimonial="Conoce a los nuevos vecinos."
+            imageUrl="/images/fortissuccess3.jpg">
+          </Service>
+        </div>
+        <div class="snap-start">
+          <Service
+            name="🎉 Nuevos Propietarios de Casa"
+            testimonial="Conoce a los nuevos vecinos."
+            imageUrl="/images/fortissuccess4.jpg">
+          </Service>
+        </div>
+        <div class="snap-start">
+          <Service
+            name="🎉 Nuevos Propietarios de Casa"
+            testimonial="Conoce a los nuevos vecinos."
+            imageUrl="/images/fortissuccess5.jpg">
+          </Service>
+        </div>
+        <div class="snap-start">
+          <Service
+            name="🎉 Nuevos Propietarios de Casa"
+            testimonial="Conoce a los nuevos vecinos."
+            imageUrl="/images/fortissuccess6.jpg">
+          </Service>
+        </div>
+        <div class="snap-start">
+          <Service
+            name="🎉 Nuevos Propietarios de Casa"
+            testimonial="Conoce a los nuevos vecinos."
+            imageUrl="/images/fortissuccess7.jpg">
+          </Service>
+        </div>
+        <div class="snap-start">
+          <Service
+            name="🎉 Nuevos Propietarios de Casa"
+            testimonial="Conoce a los nuevos vecinos."
+            imageUrl="/images/fortissuccess8.jpg">
+          </Service>
+        </div>
+        <div class="snap-start">
+          <Service
+            name="🎉 Nuevos Propietarios de Casa"
+            testimonial="Conoce a los nuevos vecinos."
+            imageUrl="/images/fortissuccess9.jpg">
+          </Service>
+        </div>
+        <div class="snap-start">
+          <Service
+            name="🎉 Nuevos Propietarios de Casa"
+            testimonial="Conoce a los nuevos vecinos."
+            imageUrl="/images/fortissuccess10.jpg">
+          </Service>
+        </div>
+        <div class="snap-start">
+          <Service
+            name="🎉 Nuevos Propietarios de Casa"
+            testimonial="Conoce a los nuevos vecinos."
+            imageUrl="/images/fortissuccess11.jpg">
+          </Service>
+        </div>
+        <div class="snap-start">
+          <Service
+            name="🎉 Nuevos Propietarios de Casa"
+            testimonial="Conoce a los nuevos vecinos."
+            imageUrl="/images/fortissuccess12.jpg">
+          </Service>
+        </div>
         <div class="snap-start">
         <Service
           name="🎉 Nuevos Propietarios de Casa"
@@ -112,3 +195,29 @@ import Title from "../shared/Title.astro";
     </Container>
   </section>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const scrollContainer = document.querySelector('.flex.overflow-x-auto');
+      let scrollStep = 1000; // Adjust this value based on the size of your items
+      let scrollInterval;
+  
+      function startAutoScroll() {
+        scrollInterval = setInterval(function () {
+          if (scrollContainer.scrollLeft < scrollContainer.scrollWidth - scrollContainer.clientWidth) {
+            scrollContainer.scrollBy({ left: scrollStep, top: 0, behavior: 'smooth' });
+          } else {
+            scrollContainer.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+          }
+        }, 4000); // Adjust time for scrolling speed
+      }
+  
+      function stopAutoScroll() {
+        clearInterval(scrollInterval);
+      }
+  
+      scrollContainer.addEventListener('mouseenter', stopAutoScroll);
+      scrollContainer.addEventListener('mouseleave', startAutoScroll);
+  
+      startAutoScroll();
+    });
+  </script>
