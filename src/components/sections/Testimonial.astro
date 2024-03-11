@@ -197,4 +197,29 @@ import Title from "../shared/Title.astro";
     </Container>
   </section>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const scrollContainer = document.querySelector('.flex.overflow-x-auto');
+      let scrollStep = 300; // Adjust this value based on the size of your items
+      let scrollInterval;
   
+      function startAutoScroll() {
+        scrollInterval = setInterval(function () {
+          if (scrollContainer.scrollLeft < scrollContainer.scrollWidth - scrollContainer.clientWidth) {
+            scrollContainer.scrollBy({ left: scrollStep, top: 0, behavior: 'smooth' });
+          } else {
+            scrollContainer.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+          }
+        }, 2000); // Adjust time for scrolling speed
+      }
+  
+      function stopAutoScroll() {
+        clearInterval(scrollInterval);
+      }
+  
+      scrollContainer.addEventListener('mouseenter', stopAutoScroll);
+      scrollContainer.addEventListener('mouseleave', startAutoScroll);
+  
+      startAutoScroll();
+    });
+  </script>
