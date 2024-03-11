@@ -195,35 +195,3 @@ import Title from "../shared/Title.astro";
     </Container>
   </section>
   
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const scrollContainer = document.querySelector('.flex.overflow-x-auto');
-      let scrollStep = 710; // Adjust this value based on the size of your items
-      let scrollInterval: number | undefined;
-  
-      function startAutoScroll() {
-        scrollInterval = setInterval(function () {
-          if (scrollContainer && scrollContainer.scrollLeft < scrollContainer.scrollWidth - scrollContainer.clientWidth) {
-            scrollContainer.scrollBy({ left: scrollStep, top: 0, behavior: 'smooth' });
-          } else {
-            if (scrollContainer) {
-              scrollContainer.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
-            }
-          }
-        }, 4000); // Adjust time for scrolling speed
-      }
-  
-      function stopAutoScroll() {
-        clearInterval(scrollInterval);
-      }
-  
-      if (scrollContainer) {
-        scrollContainer.addEventListener('touchstart', stopAutoScroll);
-        scrollContainer.addEventListener('touchend', startAutoScroll);
-      }
-     
-  
-      startAutoScroll();
-    });
-  </script>
-  
