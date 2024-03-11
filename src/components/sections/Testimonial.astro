@@ -196,12 +196,10 @@ import Title from "../shared/Title.astro";
       </div>
     </Container>
   </section>
-
-
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const scrollContainer = document.querySelector('.flex.overflow-x-auto');
-      let scrollStep = 1000; // Adjust this value based on the size of your items
+      let scrollStep = 710; // Adjust this value based on the size of your items
       let scrollInterval;
   
       function startAutoScroll() {
@@ -218,8 +216,8 @@ import Title from "../shared/Title.astro";
         clearInterval(scrollInterval);
       }
   
-      scrollContainer.addEventListener('mouseenter', stopAutoScroll);
-      scrollContainer.addEventListener('mouseleave', startAutoScroll);
+      scrollContainer.addEventListener('touchstart', stopAutoScroll);
+      scrollContainer.addEventListener('touchend', startAutoScroll);
   
       startAutoScroll();
     });
