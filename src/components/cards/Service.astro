@@ -10,7 +10,31 @@ export interface Props{
 
 const {title, description, imageUrl, language} = Astro.props
 ---
-<div class="flex flex-col relative p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow overflow-hidden">
+<style>
+    /* Add this to your styles */
+@keyframes cardEntry {
+  0% {
+    transform: translateY(30px) scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.service-card {
+  animation: cardEntry 0.6s ease-out forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+</style>
+<div class="service-card flex flex-col relative p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow overflow-hidden">
     <div class="flex-none w-full h-1/2 ">
         <img src={imageUrl} alt={title} class="w-full h-full object-cover pb-5 rounded-t-3xl"/>
     </div>

@@ -13,7 +13,7 @@ import Container from "../shared/Container.astro";
         >
           1000+
         </h2>
-        <p class="mt-2 text-heading-3">Pólizas de Seguro Personalizadas Escritas</p>
+        <p class="mt-2 text-heading-3 stat-description">Pólizas de Seguro Personalizadas Escritas</p>
       </div>
   <div class="text-center">
     <h2
@@ -21,7 +21,7 @@ import Container from "../shared/Container.astro";
     >
       7+
     </h2>
-    <p class="mt-2 text-heading-3">Años de Experiencia en Bienes Raíces</p>
+    <p class="mt-2 text-heading-3 stat-description">Años de Experiencia en Bienes Raíces</p>
   </div>
 
   <div class="text-center">
@@ -30,7 +30,7 @@ import Container from "../shared/Container.astro";
     >
       97%
     </h2>
-    <p class="mt-2 text-heading-3"> Índice de Satisfacción entre Nuestros Clientes</p>
+    <p class="mt-2 text-heading-3 stat-description"> Índice de Satisfacción entre Nuestros Clientes</p>
   </div>
 
   <div class="text-center">
@@ -39,6 +39,98 @@ import Container from "../shared/Container.astro";
     >
       16+
     </h2>
-    <p class="mt-2 text-heading-3">Años de experiencia en seguros</p>
+    <p class="mt-2 text-heading-3 stat-description">Años de experiencia en seguros</p>
   </div>
 </div>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+    .statistic {
+      animation: fadeIn 1.5s ease-out forwards;
+      opacity: 0; /* Start hidden */
+      animation-delay: 0.3s;
+    }
+    
+    .stat-number {
+      animation: slideIn 1.5s ease-out forwards;
+      opacity: 0;
+      animation-delay: 0.6s;
+    }
+    
+    .stat-description {
+      animation: slideIn 1.5s ease-out forwards;
+      opacity: 0;
+      animation-delay: 0.9s;
+    }
+    
+    /* Adjust animation delays for each item */
+    .statistic:nth-child(2) {
+      animation-delay: 0.6s;
+    }
+    
+    .statistic:nth-child(3) {
+      animation-delay: 0.9s;
+    }
+    
+    .statistic:nth-child(4) {
+      animation-delay: 1.2s;
+    }
+    
+    .stat-number:nth-child(2) {
+      animation-delay: 0.9s;
+    }
+    
+    .stat-number:nth-child(3) {
+      animation-delay: 1.2s;
+    }
+    
+    .stat-number:nth-child(4) {
+      animation-delay: 1.5s;
+    }
+    
+    .stat-description:nth-child(2) {
+      animation-delay: 1.2s;
+    }
+    
+    .stat-description:nth-child(3) {
+      animation-delay: 1.5s;
+    }
+    
+    .stat-description:nth-child(4) {
+      animation-delay: 1.8s;
+    }
+    
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .statistic {
+        animation: fadeIn 1s ease-out forwards;
+      }
+    
+      .stat-number,
+      .stat-description {
+        animation: slideIn 1s ease-out forwards;
+      }
+    }
+    </style>
+    

@@ -1,0 +1,13 @@
+---
+export interface Props{
+    href:string,
+    textEn: string,
+    textEs: string,
+}
+const {href, textEn, textEs} = Astro.props
+---
+<li>
+    <a href={href} class="nav-item duration-300 font-medium ease-linear hover:text-primary py-3" data-text-en={textEn} data-text-es={textEs}>
+    {textEs}
+    </a>
+</li>

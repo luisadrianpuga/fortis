@@ -1,47 +1,137 @@
 ---
 import Container from "../shared/Container.astro";
 ---
-
 <section class="relative mt-12 md:mt-16">
   <Container>
     <div
-      class="mx-auto lg:mx-0 p-5 sm:p-6 py-6 sm:py-8 max-w-5xl rounded-3xl bg-box-bg border border-box-border shadow-lg  shadow-box-shadow md:divide-x divide-box-border grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 md:gap-6 lg:gap-12"
+      class="mx-auto lg:mx-0 p-5 sm:p-6 py-6 sm:py-8 max-w-5xl rounded-3xl bg-box-bg border border-box-border shadow-lg shadow-box-shadow md:divide-x divide-box-border grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 md:gap-6 lg:gap-12"
     >
-      <div class="text-center">
+      <div class="text-center statistic">
         <h2
-          class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1"
+          class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1 stat-number"
         >
           1000+
         </h2>
-        <p class="mt-2 text-heading-3">Customized Insurance Policies Written</p>
+        <p class="mt-2 text-heading-3 stat-description">Customized Insurance Policies Written</p>
       </div>
 
-      <div class="text-center">
+      <div class="text-center statistic">
         <h2
-          class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1"
+          class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1 stat-number"
         >
-        7+
+          7+
         </h2>
-        <p class="mt-2 text-heading-3">Years of Real Estate Experience</p>
+        <p class="mt-2 text-heading-3 stat-description">Years of Real Estate Experience</p>
       </div>
 
-      <div class="text-center">
+      <div class="text-center statistic">
         <h2
-          class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1"
+          class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1 stat-number"
         >
-        97%
+          97%
         </h2>
-        <p class="mt-2 text-heading-3">Satisfaction Rate Among Clients.</p>
+        <p class="mt-2 text-heading-3 stat-description">Satisfaction Rate Among Clients.</p>
       </div>
 
-      <div class="text-center">
+      <div class="text-center statistic">
         <h2
-          class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1"
+          class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1 stat-number"
         >
           16+
         </h2>
-        <p class="mt-2 text-heading-3">Years of Insurance experience </p>
+        <p class="mt-2 text-heading-3 stat-description">Years of Insurance Experience</p>
       </div>
     </div>
   </Container>
 </section>
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+    .statistic {
+      animation: fadeIn 1.5s ease-out forwards;
+      opacity: 0; /* Start hidden */
+      animation-delay: 0.3s;
+    }
+    
+    .stat-number {
+      animation: slideIn 1.5s ease-out forwards;
+      opacity: 0;
+      animation-delay: 0.6s;
+    }
+    
+    .stat-description {
+      animation: slideIn 1.5s ease-out forwards;
+      opacity: 0;
+      animation-delay: 0.9s;
+    }
+    
+    /* Adjust animation delays for each item */
+    .statistic:nth-child(2) {
+      animation-delay: 0.6s;
+    }
+    
+    .statistic:nth-child(3) {
+      animation-delay: 0.9s;
+    }
+    
+    .statistic:nth-child(4) {
+      animation-delay: 1.2s;
+    }
+    
+    .stat-number:nth-child(2) {
+      animation-delay: 0.9s;
+    }
+    
+    .stat-number:nth-child(3) {
+      animation-delay: 1.2s;
+    }
+    
+    .stat-number:nth-child(4) {
+      animation-delay: 1.5s;
+    }
+    
+    .stat-description:nth-child(2) {
+      animation-delay: 1.2s;
+    }
+    
+    .stat-description:nth-child(3) {
+      animation-delay: 1.5s;
+    }
+    
+    .stat-description:nth-child(4) {
+      animation-delay: 1.8s;
+    }
+    
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .statistic {
+        animation: fadeIn 1s ease-out forwards;
+      }
+    
+      .stat-number,
+      .stat-description {
+        animation: slideIn 1s ease-out forwards;
+      }
+    }
+    </style>
+    

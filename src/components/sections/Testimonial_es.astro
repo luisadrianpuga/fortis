@@ -6,51 +6,52 @@ import Title from "../shared/Title.astro";
 
 <style>
   .snap {
-  scroll-snap-type: mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: 10px; 
-}
+    scroll-snap-type: mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: 10px;
+  }
 
-.snap-x {
-  scroll-snap-type: x mandatory;
-}
+  .snap-x {
+    scroll-snap-type: x mandatory;
+  }
 
-.snap-start {
-  width: 100%;
-  flex-shrink: 0;
-  min-height: 40px; 
-  display: flex; 
-  flex-direction: column; 
-  align-items: stretch; 
-  overflow: hidden; 
-  justify-content: space-between; 
-}
+  .snap-start {
+    width: 100%;
+    flex-shrink: 0;
+    min-height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow: hidden;
+    justify-content: space-between;
+  }
 
-@media screen and (min-width: 768px) { 
+  @media screen and (min-width: 768px) {
     .snap-start {
-        width: 30%;
+      width: 30%;
     }
-}
+  }
 
-.Service img {
+  .Service img {
     object-fit: cover;
     width: 100%;
     height: 100%;
-}
-.snap-center {
-  scroll-snap-align: center;
-}
+  }
 
+  .snap-center {
+    scroll-snap-align: center;
+  }
 </style>
-<section id="testimonials">
-    <Container className="space-y-10 md:sapce-y-12">
-      <div class="text-center max-w-3xl mx-auto space-y-4">
-        <Title>
-          ¡Aquí están algunos de nuestros clientes satisfechos!
-        </Title>
-      </div>
-      <div class="flex overflow-x-auto snap snap-x">
+
+<section id="testimonials" class="relative mt-12 md:mt-16">
+  <Container className="space-y-10 md:space-y-12">
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+      <Title className="fade-in">
+        ¡Aquí están algunos de nuestros clientes satisfechos!
+      </Title>
+    </div>
+    <div id="testimonial-container" class="flex overflow-x-auto snap snap-x relative">
         <div class="snap-start">
           <Service
             name="🎉 Nuevos Propietarios de Casa"
@@ -58,126 +59,126 @@ import Title from "../shared/Title.astro";
             imageUrl="/images/fortissuccess1.jpg">
           </Service>
         </div>
-        <div class="snap-start">
+        <div class="snap-start ">
           <Service
             name="🎉 Nuevos Propietarios de Casa"
             testimonial="Conoce a los nuevos vecinos."
             imageUrl="/images/fortissuccess2.jpg">
           </Service>
         </div>
-        <div class="snap-start">
+        <div class="snap-start ">
           <Service
             name="🎉 Nuevos Propietarios de Casa"
             testimonial="Conoce a los nuevos vecinos."
             imageUrl="/images/fortissuccess3.jpg">
           </Service>
         </div>
-        <div class="snap-start">
+        <div class="snap-start ">
           <Service
             name="🎉 Nuevos Propietarios de Casa"
             testimonial="Conoce a los nuevos vecinos."
             imageUrl="/images/fortissuccess4.jpg">
           </Service>
         </div>
-        <div class="snap-start">
+        <div class="snap-start ">
           <Service
             name="🎉 Nuevos Propietarios de Casa"
             testimonial="Conoce a los nuevos vecinos."
             imageUrl="/images/fortissuccess5.jpg">
           </Service>
         </div>
-        <div class="snap-start">
+        <div class="snap-start ">
           <Service
             name="🎉 Nuevos Propietarios de Casa"
             testimonial="Conoce a los nuevos vecinos."
             imageUrl="/images/fortissuccess6.jpg">
           </Service>
         </div>
-        <div class="snap-start">
+        <div class="snap-start ">
           <Service
             name="🎉 Nuevos Propietarios de Casa"
             testimonial="Conoce a los nuevos vecinos."
             imageUrl="/images/fortissuccess7.jpg">
           </Service>
         </div>
-        <div class="snap-start">
+        <div class="snap-start ">
           <Service
             name="🎉 Nuevos Propietarios de Casa"
             testimonial="Conoce a los nuevos vecinos."
             imageUrl="/images/fortissuccess8.jpg">
           </Service>
         </div>
-        <div class="snap-start">
+        <div class="snap-start ">
           <Service
             name="🎉 Nuevos Propietarios de Casa"
             testimonial="Conoce a los nuevos vecinos."
             imageUrl="/images/fortissuccess9.jpg">
           </Service>
         </div>
-        <div class="snap-start">
+        <div class="snap-start ">
           <Service
             name="🎉 Nuevos Propietarios de Casa"
             testimonial="Conoce a los nuevos vecinos."
             imageUrl="/images/fortissuccess10.jpg">
           </Service>
         </div>
-        <div class="snap-start">
+        <div class="snap-start ">
           <Service
             name="🎉 Nuevos Propietarios de Casa"
             testimonial="Conoce a los nuevos vecinos."
             imageUrl="/images/fortissuccess11.jpg">
           </Service>
         </div>
-        <div class="snap-start">
+        <div class="snap-start ">
           <Service
             name="🎉 Nuevos Propietarios de Casa"
             testimonial="Conoce a los nuevos vecinos."
             imageUrl="/images/fortissuccess12.jpg">
           </Service>
         </div>
-        <div class="snap-start">
+        <div class="snap-start ">
         <Service
           name="🎉 Nuevos Propietarios de Casa"
           testimonial="Conoce a los nuevos vecinos."
           imageUrl="https://static.wixstatic.com/media/90a441_7221ea8072a946769376f5707c3c8111~mv2.jpg/v1/fill/w_826,h_826,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/90a441_7221ea8072a946769376f5707c3c8111~mv2.jpg">
         </Service>
         </div>
-        <div class="snap-start">
+        <div class="snap-start ">
         <Service
           name="🎉 Nuevos Propietarios de Casa"
           testimonial="Conoce a los nuevos vecinos."
           imageUrl="https://static.wixstatic.com/media/90a441_e51332884e5943a68a81a2ec2384b3fd~mv2.jpg/v1/fill/w_826,h_826,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/90a441_e51332884e5943a68a81a2ec2384b3fd~mv2.jpg">
         </Service>
         </div>
-        <div class="snap-start">
+        <div class="snap-start ">
         <Service
           name="🎉 Nuevos Propietarios de Casa"
           testimonial="Conoce a los nuevos vecinos."
           imageUrl="https://static.wixstatic.com/media/90a441_3fe99051a3284095b85f3b2846559a0c~mv2.jpg/v1/fill/w_690,h_690,al_c,q_85,enc_auto/90a441_3fe99051a3284095b85f3b2846559a0c~mv2.jpg">
         </Service>
         </div>
-        <div class="snap-start">
+        <div class="snap-start ">
         <Service
           name="🎉 Nuevos Propietarios de Casa"
           testimonial="Conoce a los nuevos vecinos."
           imageUrl="https://static.wixstatic.com/media/90a441_8d8396bdbda04d4fb65b4735bfe82d02~mv2.jpg/v1/fill/w_826,h_826,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/90a441_8d8396bdbda04d4fb65b4735bfe82d02~mv2.jpg">
         </Service>
         </div>
-        <div class="snap-start">
+        <div class="snap-start ">
         <Service
           name="🎉 Nuevos Propietarios de Casa"
           testimonial="Conoce a los nuevos vecinos."
           imageUrl="https://static.wixstatic.com/media/90a441_40bb6567d479406d92e6d28005e1f6e9~mv2.jpg/v1/fill/w_826,h_826,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/90a441_40bb6567d479406d92e6d28005e1f6e9~mv2.jpg">
         </Service>
         </div>
-        <div class="snap-start">
+        <div class="snap-start ">
         <Service
           name="🎉 Nuevos Propietarios de Casa"
           testimonial="Conoce a los nuevos vecinos."
           imageUrl="https://static.wixstatic.com/media/90a441_9894c57d92614212844d3b2d581d9a75~mv2.jpg/v1/fill/w_231,h_315,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/90a441_9894c57d92614212844d3b2d581d9a75~mv2.jpg">
         </Service>
         </div>
-        <div class="snap-start">
+        <div class="snap-start ">
        <Service
           name="🎉 Nuevos Propietarios de Casa"
           testimonial="Conoce a los nuevos vecinos."
@@ -194,4 +195,27 @@ import Title from "../shared/Title.astro";
       </div>
     </Container>
   </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('testimonial-container');
+      const scrollInterval = 3000; // Time in milliseconds between scrolls
+      const scrollAmount = container.clientWidth; // Amount to scroll each time
+  
+      let scrollPosition = 0;
+  
+      setInterval(() => {
+        if (scrollPosition >= container.scrollWidth - container.clientWidth) {
+          // If at the end, reset to start
+          scrollPosition = 0;
+        } else {
+          // Otherwise, move to the next item
+          scrollPosition += scrollAmount;
+        }
+        container.scrollTo({
+          left: scrollPosition,
+          behavior: 'smooth'
+        });
+      }, scrollInterval);
+    });
+  </script>
   

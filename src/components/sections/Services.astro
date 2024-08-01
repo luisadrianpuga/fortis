@@ -46,3 +46,78 @@ import Title from "../shared/Title.astro";
         </div>
     </Container>
 </section>
+
+
+<style>
+/* Base styles for service cards */
+.service-card {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeInScale 0.8s forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Fade-up animation for text */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply fade-up animation to title and paragraph */
+.title, .paragraph {
+    opacity: 0;
+    animation: fadeUp 0.8s forwards;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Stagger animation for title and paragraph */
+.title {
+    animation-delay: 0.2s;
+}
+
+.paragraph {
+    animation-delay: 0.4s;
+}
+
+/* Keyframes for fade-in and scale-up effect */
+@keyframes fadeInScale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Stagger animation for each card */
+.service-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.service-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.service-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.service-card:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.service-card:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.service-card:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+
+
+</style>

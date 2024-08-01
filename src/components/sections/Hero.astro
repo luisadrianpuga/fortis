@@ -5,42 +5,131 @@ import Paragraph from "../shared/Paragraph.astro";
 import ByNumber from "./ByNumber.astro";
 
 ---
-
-
 <section class="relative pt-32 lg:pt-36">
     <Container className={"flex flex-col lg:flex-row gap-10 lg:gap-12"}>
-        <div class="absolute w-full lg:w-1/2 inset-y-0 lg:right-0 ">
-            <span class="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-green-400 blur-xl opacity-60 lg:opacity-95 lg:block hidden"></span>
-            <span class="absolute right-4 bottom-12 w-24 h-24 rounded-3xl bg-primary blur-xl opacity-80"></span>
+      <div class="image-container flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl mr-10 ml-10">
+        <img
+          src="/logos/NEWfortis.png"
+          alt="Hero image"
+          width="2350"
+          height="2359"
+          class="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96"
+        />
+      </div>
+  
+      <div class="text-content relative flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-8 lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2">
+        <h1 class="heading text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight font-bold text-heading-1">
+          Professional Insurance Solutions Crafted
+          <span
+            class="highlight text-transparent bg-clip-text bg-gradient-to-br from-black from-20% via-primary via-30% to-orange-500"
+            >for You</span
+          >!
+        </h1>
+  
+        <Paragraph className="mt-8 paragraph">
+          At Fortis, we understand the intricacies of safeguarding your business
+          and personal assets. With our extensive expertise in insurance and a
+          deep understanding of the unique challenges business owners face, we
+          deliver solutions that not only protect your venture but also
+          contribute to its growth and stability.
+        </Paragraph>
+        <div class="button-container mt-10 max-w-md mx-auto">
+          <form
+            action="https://calendly.com/fortismultiservice/booknow"
+            target="_blank"
+            class="flex items-center shadow-lg rounded-full bg-primary"
+          >
+            <input
+              type="submit"
+              value="Book a Call Now To Get Started"
+              class="flex-grow p-3 lg:p-4 text-white text-heading-3 focus:outline-none"
+            />
+            <svg
+              class="w-6 h-6 text-white mx-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                d="M12 10l-3.559 3.562c-0.172 0.173-0.451 0.176-0.625 0-0.173-0.173-0.173-0.451 0-0.624l3.248-3.25-3.248-3.25c-0.173-0.173-0.173-0.451 0-0.624 0.172-0.175 0.451-0.175 0.624 0l3.738 3.736c0.172 0.173 0.172 0.454 0 0.626L12 10z M18.406 10c0 4.644-3.764 8.406-8.406 8.406S1.594 14.644 1.594 10 5.356 1.594 10 1.594 18.406 5.356 18.406 10zM17.521 10c0-4.148-3.374-7.521-7.521-7.521S2.479 5.852 2.479 10s3.374 7.521 7.521 7.521S17.521 14.148 17.521 10z"
+              ></path>
+            </svg>
+          </form>
         </div>
-        <div class="relative flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-8 
-        lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2">
-            
-            <h1 class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight
-            font-bold text-heading-1">
-            Business-Centric Insurance Solutions Crafted   <span class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">for You</span>!
-            </h1>
-            
-            <Paragraph className="mt-8">
-                At Fortis, we understand the intricacies of safeguarding your business and personal assets. With our extensive expertise in insurance and a deep understanding of the unique challenges business owners face, we deliver solutions that not only protect your venture but also contribute to its growth and stability.
-            </Paragraph>
-            <div class="mt-10 max-w-md mx-auto">
-                <form action="https://calendly.com/fortismultiservice/booknow" target="_blank" class="flex items-center shadow-lg rounded-full bg-primary">
-                  <input type="submit" value="Book a Call Now To Get Started" class="flex-grow p-3 lg:p-4 text-white text-heading-3 focus:outline-none">
-                  <svg class="w-6 h-6 text-white mx-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path d="M12 10l-3.559 3.562c-0.172 0.173-0.451 0.176-0.625 0-0.173-0.173-0.173-0.451 0-0.624l3.248-3.25-3.248-3.25c-0.173-0.173-0.173-0.451 0-0.624 0.172-0.175 0.451-0.175 0.624 0l3.738 3.736c0.172 0.173 0.172 0.454 0 0.626L12 10z M18.406 10c0 4.644-3.764 8.406-8.406 8.406S1.594 14.644 1.594 10 5.356 1.594 10 1.594 18.406 5.356 18.406 10zM17.521 10c0-4.148-3.374-7.521-7.521-7.521S2.479 5.852 2.479 10s3.374 7.521 7.521 7.521S17.521 14.148 17.521 10z"></path>
-                  </svg>
-                </form>
-                
-            </div>
-              
-              
-        </div>
-
-        <div class="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
-            <img src="/logos/NEWfortis.png" alt="Hero image" width="2350" height="2359" class="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96">
-        </div>
+      </div>
     </Container>
+  
+    <ByNumber />
+  </section>
+  
 
-    <ByNumber/>
-</section>
+<style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes gradientSlide {
+      0% {
+        background-position: 100% 0;
+      }
+      100% {
+        background-position: 0 100%;
+      }
+    }
+    
+        .image-container {
+          animation: fadeInUp 1.5s ease-out forwards;
+          opacity: 0; /* Start hidden */
+        }
+        
+        .text-content {
+          animation: fadeInLeft 1.5s ease-out forwards;
+          opacity: 0; /* Start hidden */
+          animation-delay: 0.5s;
+        }
+        
+        .heading .highlight {
+          animation: gradientSlide 3s linear infinite;
+          background-size: 200% 200%;
+        }
+        
+        .paragraph {
+          animation: fadeInUp 2s ease-out forwards;
+          opacity: 0;
+          animation-delay: 1s;
+        }
+        
+        .button-container {
+          animation: fadeInUp 2.5s ease-out forwards;
+          opacity: 0;
+          animation-delay: 1.5s;
+        }
+
+        @media (max-width: 768px) {
+  .image-container,
+  .text-content,
+  .button-container {
+    animation-duration: 1s;
+  }
+}
+
+        </style>
+        

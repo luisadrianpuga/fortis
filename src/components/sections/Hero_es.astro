@@ -8,18 +8,17 @@ import ByNumber from "./ByNumber_es.astro";
 
 <section class="relative pt-32 lg:pt-36">
     <Container className={"flex flex-col lg:flex-row gap-10 lg:gap-12"}>
-        <div class="absolute w-full lg:w-1/2 inset-y-0 lg:right-0 ">
-            <span class="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-green-400 blur-xl opacity-60 lg:opacity-95 lg:block hidden"></span>
-            <span class="absolute right-4 bottom-12 w-24 h-24 rounded-3xl bg-primary blur-xl opacity-80"></span>
+        <div class="image-container flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
+            <img src="/logos/NEWfortis.png" alt="Hero image" width="2350" height="2359" class="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96">
         </div>
-        <div class="relative flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-8 
+        <div class="text-content relative flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-8 
         lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2">
             
-            <h1 class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight
+            <h1 class="heading text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight
             font-bold text-heading-1">
             Soluciones de Seguro Centradas en el Negocio y <span class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">Creadas para Ti</span>!
             </h1>
-            <Paragraph className="mt-8">
+            <Paragraph className="highlight mt-8">
                 En Fortis, comprendemos las complejidades de proteger tus activos personales y empresariales. Con nuestra amplia experiencia en seguros y un profundo entendimiento de los desafíos únicos que enfrentan los dueños de negocios, entregamos soluciones que no solo protegen tu emprendimiento, sino que también contribuyen a su crecimiento y estabilidad.
             </Paragraph>
             <div class="mt-10 max-w-md mx-auto">
@@ -34,10 +33,80 @@ import ByNumber from "./ByNumber_es.astro";
               
         </div>
 
-        <div class="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
-            <img src="/logos/NEWfortis.png" alt="Hero image" width="2350" height="2359" class="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96">
-        </div>
+       
     </Container>
 
     <ByNumber/>
 </section>
+
+
+<style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes gradientSlide {
+      0% {
+        background-position: 100% 0;
+      }
+      100% {
+        background-position: 0 100%;
+      }
+    }
+    
+        .image-container {
+          animation: fadeInUp 1.5s ease-out forwards;
+          opacity: 0; /* Start hidden */
+        }
+        
+        .text-content {
+          animation: fadeInLeft 1.5s ease-out forwards;
+          opacity: 0; /* Start hidden */
+          animation-delay: 0.5s;
+        }
+        
+        .heading .highlight {
+          animation: gradientSlide 3s linear infinite;
+          background-size: 200% 200%;
+        }
+        
+        .paragraph {
+          animation: fadeInUp 2s ease-out forwards;
+          opacity: 0;
+          animation-delay: 1s;
+        }
+        
+        .button-container {
+          animation: fadeInUp 2.5s ease-out forwards;
+          opacity: 0;
+          animation-delay: 1.5s;
+        }
+
+        @media (max-width: 768px) {
+  .image-container,
+  .text-content,
+  .button-container {
+    animation-duration: 1s;
+  }
+}
+
+        </style>
+        

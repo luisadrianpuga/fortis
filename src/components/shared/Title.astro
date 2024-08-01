@@ -1,3 +1,68 @@
 <h1 class="text-heading-1 font-semibold text-2xl sm:text-3xl md:text-4xl">
     <slot/>
 </h1>
+
+<style>
+    /* Base styles for the heading */
+.text-heading-1 {
+    position: relative; /* Allows for positioning of pseudo-elements */
+    overflow: hidden; /* Ensures no overflow during animation */
+}
+
+/* Animation keyframes for sliding from left to right */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animation keyframes for sliding from right to left */
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Initial state of the element before animation starts */
+.slide-in {
+    opacity: 0;
+    animation-duration: 1s; /* Duration of the animation */
+    animation-fill-mode: forwards; /* Maintains the end state after animation */
+}
+
+/* Helper class to trigger animations from the left */
+.from-left {
+    animation-name: slideInFromLeft;
+}
+
+/* Helper class to trigger animations from the right */
+.from-right {
+    animation-name: slideInFromRight;
+}
+
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const heading = document.querySelector('.slide-in');
+
+    // Randomly choose between true or false
+    const fromLeft = Math.random() >= 0.5;
+
+    if (fromLeft) {
+        heading.classList.add('from-left');
+    } else {
+        heading.classList.add('from-right');
+    }
+});
+
+</script>
